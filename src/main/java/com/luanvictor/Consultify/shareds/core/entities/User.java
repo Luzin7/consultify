@@ -1,17 +1,17 @@
 package com.luanvictor.Consultify.shareds.core.entities;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User extends BaseEntity {
+@MappedSuperclass
+public abstract class User extends BaseEntity {
     private String email;
 
     private String password;
