@@ -1,4 +1,4 @@
-package com.luanvictor.Consultify.entities.admin;
+package com.luanvictor.Consultify.shareds.core.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,12 +9,12 @@ import lombok.Setter;
 import java.util.Date;
 
 @Entity
-@Table(name = "professionals")
+@Table(name = "administrators")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Admin {
+public class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,7 +24,4 @@ public class Admin {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "updated_at")
     private Date updatedAt;
-    private String email;
-    private String password;
-    private String name;
 }

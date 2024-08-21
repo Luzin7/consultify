@@ -1,13 +1,15 @@
-package com.luanvictor.Consultify.entities.appointment;
+package com.luanvictor.Consultify.modules.appointment.entities;
 
-import jakarta.persistence.*;
+import com.luanvictor.Consultify.shareds.core.entities.BaseEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Table(name = "professionals")
@@ -15,16 +17,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Appointment {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_at", updatable = false)
-    private Date createdAt;
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "updated_at")
-    private Date updatedAt;
+public class Appointment extends BaseEntity {
     @Column(name = "patient_name")
     private String patientName;
     @Column(name = "professional_id")
