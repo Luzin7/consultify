@@ -1,4 +1,4 @@
-package com.luanvictor.Consultify.modules.admin.domains;
+package com.luanvictor.Consultify.modules.admin.entities;
 
 import com.luanvictor.Consultify.shareds.core.entities.User;
 import jakarta.persistence.Entity;

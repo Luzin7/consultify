@@ -1,4 +1,20 @@
-package com.luanvictor.Consultify.shareds.core.domains;
+package com.luanvictor.Consultify.shareds.core.entities;
 
-public class User {
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class User extends BaseEntity {
+    private String email;
+
+    private String password;
+
+    private String name;
 }

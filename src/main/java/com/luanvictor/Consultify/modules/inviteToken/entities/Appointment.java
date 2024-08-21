@@ -1,4 +1,4 @@
-package com.luanvictor.Consultify.modules.appointment.entities;
+package com.luanvictor.Consultify.modules.inviteToken.entities;
 
 import com.luanvictor.Consultify.shareds.core.entities.BaseEntity;
 import jakarta.persistence.Column;
