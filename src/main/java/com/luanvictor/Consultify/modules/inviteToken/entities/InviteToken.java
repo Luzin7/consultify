@@ -1,4 +1,4 @@
-package com.luanvictor.Consultify.modules.appointment.entities;
+package com.luanvictor.Consultify.modules.inviteToken.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,7 +12,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "professionals")
+@Table(name = "invite_tokens")
 @Getter
 @Setter
 @AllArgsConstructor
