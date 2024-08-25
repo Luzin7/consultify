@@ -17,7 +17,6 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class InviteToken {
     @Id
     private String token;
