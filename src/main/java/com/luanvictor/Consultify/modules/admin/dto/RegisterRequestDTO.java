@@ -1,4 +1,4 @@
 package com.luanvictor.Consultify.modules.admin.dto;
 
-public record RegisterRequestDTO() {
+public record RegisterRequestDTO(String name, String email, String password) {
 }
