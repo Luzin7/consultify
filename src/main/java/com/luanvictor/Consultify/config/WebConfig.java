@@ -9,7 +9,6 @@ import java.util.List;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-
     private final AuthTokenArgumentResolver authTokenArgumentResolver;
 
     public WebConfig(AuthTokenArgumentResolver authTokenArgumentResolver) {
