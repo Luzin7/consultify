@@ -7,5 +7,4 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "administrators")
 public class Admin extends User {
-
 }
