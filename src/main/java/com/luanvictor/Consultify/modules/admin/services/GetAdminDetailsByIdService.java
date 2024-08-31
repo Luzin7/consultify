@@ -1,12 +1,12 @@
 package com.luanvictor.Consultify.modules.admin.services;
 
-import com.luanvictor.Consultify.modules.admin.dto.AuthRequestDTO;
 import com.luanvictor.Consultify.modules.admin.entities.Admin;
-import com.luanvictor.Consultify.modules.admin.errors.InvalidCredentialsException;
 import com.luanvictor.Consultify.modules.admin.repositories.AdminRepository;
 import com.luanvictor.Consultify.providers.auth.JwtEncryption;
 import com.luanvictor.Consultify.providers.cryptography.PasswordEncryption;
+import com.luanvictor.Consultify.shared.dto.AuthRequestDTO;
 import com.luanvictor.Consultify.shared.exceptions.InvalidAuthTokenException;
+import com.luanvictor.Consultify.shared.exceptions.InvalidCredentialsException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

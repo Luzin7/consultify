@@ -1,9 +1,9 @@
 package com.luanvictor.Consultify.modules.admin.controllers;
 
-import com.luanvictor.Consultify.modules.admin.dto.AuthRequestDTO;
 import com.luanvictor.Consultify.modules.admin.entities.Admin;
 import com.luanvictor.Consultify.modules.admin.services.GetAdminDetailsByIdService;
 import com.luanvictor.Consultify.providers.decorators.authToken.AuthToken;
+import com.luanvictor.Consultify.shared.dto.AuthRequestDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

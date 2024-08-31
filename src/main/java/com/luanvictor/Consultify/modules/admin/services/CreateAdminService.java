@@ -2,9 +2,9 @@ package com.luanvictor.Consultify.modules.admin.services;
 
 import com.luanvictor.Consultify.modules.admin.dto.RegisterRequestDTO;
 import com.luanvictor.Consultify.modules.admin.entities.Admin;
-import com.luanvictor.Consultify.modules.admin.errors.EmailAlreadyInUseException;
 import com.luanvictor.Consultify.modules.admin.repositories.AdminRepository;
 import com.luanvictor.Consultify.providers.cryptography.PasswordEncryption;
+import com.luanvictor.Consultify.shared.exceptions.EmailAlreadyInUseException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
