@@ -1,5 +1,6 @@
 package com.luanvictor.Consultify.providers.decorators.authToken;
 
+import com.luanvictor.Consultify.modules.admin.dto.AuthRequestDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
@@ -16,13 +17,13 @@ public class AuthTokenArgumentResolver implements HandlerMethodArgumentResolver 
     }
 
     @Override
-    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
-            NativeWebRequest webRequest, org.springframework.web.bind.support.WebDataBinderFactory binderFactory) {
+    public AuthRequestDTO resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
+                                          NativeWebRequest webRequest, org.springframework.web.bind.support.WebDataBinderFactory binderFactory) {
         HttpServletRequest request = (HttpServletRequest) webRequest.getNativeRequest();
         String authHeader = request.getHeader("Authorization");
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             return null;
         }
-        return authHeader.replace("Bearer ", "");
+        return new AuthRequestDTO(authHeader.replace("Bearer ", ""));
     }
 }
