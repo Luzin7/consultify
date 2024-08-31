@@ -1,6 +1,6 @@
 package com.luanvictor.Consultify.providers.decorators.authToken;
 
-import com.luanvictor.Consultify.modules.admin.dto.AuthRequestDTO;
+import com.luanvictor.Consultify.shared.dto.AuthRequestDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
