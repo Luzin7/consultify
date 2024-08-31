@@ -1,6 +1,7 @@
 package com.luanvictor.Consultify.modules.admin.services;
 
 import com.luanvictor.Consultify.modules.admin.dto.LoginRequestDTO;
+import com.luanvictor.Consultify.modules.admin.dto.LoginResponseDTO;
 import com.luanvictor.Consultify.modules.admin.entities.Admin;
 import com.luanvictor.Consultify.modules.admin.errors.InvalidCredentialsException;
 import com.luanvictor.Consultify.modules.admin.repositories.AdminRepository;
@@ -18,7 +19,7 @@ public class LoginAdminService {
     private final PasswordEncryption passwordEncryption;
     private final JwtEncryption jwtEncryption;
 
-    public Admin execute(LoginRequestDTO request) {
+    public LoginResponseDTO execute(LoginRequestDTO request) {
         Optional<Admin> admin = this.adminRepository.findByEmail(request.email());
 
         if (admin.isEmpty()) {
@@ -31,9 +32,8 @@ public class LoginAdminService {
             throw new InvalidCredentialsException();
         }
 
-//        TODO: create token entity
-//        TODO: add token entity here
+        String accessToken = jwtEncryption.generateToken(admin.get());
 
-        return admin.get();
+        return new LoginResponseDTO(accessToken);
     }
 }
