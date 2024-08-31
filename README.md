@@ -30,4 +30,4 @@ Consultify é um projeto de estudo criado para demonstrar o uso de Spring Boot e
 ### Requisitos
 
 - Java 17 ou superior
-- Maven ou Gradle (dependendo da configuração)
+- Maven
