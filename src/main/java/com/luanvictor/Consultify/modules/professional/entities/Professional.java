@@ -1,12 +1,12 @@
 package com.luanvictor.Consultify.modules.professional.entities;
 
-import jakarta.persistence.*;
+import com.luanvictor.Consultify.core.entities.User;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.Date;
 
 @Entity
 @Table(name = "professionals")
@@ -14,18 +14,5 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Professional {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_at", updatable = false, nullable = false)
-    private Date createdAt;
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "updated_at", nullable = true)
-    private Date updatedAt;
-    private String name;
-    private String email;
-    private String password;
-    private String role; // 'doctor' or 'receptionist'
+public class Professional extends User {
 }
