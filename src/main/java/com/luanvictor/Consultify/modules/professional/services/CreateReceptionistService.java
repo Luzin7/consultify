@@ -18,17 +18,17 @@ public class CreateReceptionistService {
     private final PasswordEncryption passwordEncryption;
 
     public void execute(RegisterRequestDTO request) {
-        Optional<Professional> admin = this.professionalRepository.findByEmail(request.email());
+        Optional<Professional> professional = this.professionalRepository.findByEmail(request.email());
 
-        if (admin.isPresent()) {
+        if (professional.isPresent()) {
             throw new EmailAlreadyInUseException();
         }
 
-        Professional professional = new Professional();
-        professional.setName(request.name());
-        professional.setEmail(request.email());
-        professional.setPassword(passwordEncryption.encryptPassword(request.password()));
-        professional.setRole("RECEPTIONIST");
-        professional.setCreatedAt(new Date());
+        Professional newProfessional = new Professional();
+        newProfessional.setName(request.name());
+        newProfessional.setEmail(request.email());
+        newProfessional.setPassword(passwordEncryption.encryptPassword(request.password()));
+        newProfessional.setRole("RECEPTIONIST");
+        newProfessional.setCreatedAt(new Date());
     }
 }
